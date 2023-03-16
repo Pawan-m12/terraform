@@ -1,10 +1,11 @@
-resource "aws_instance" "my-instance" {
- 
- ami = "ami-0f8ca728008ff5af4"
- instance_type = "t2.micro"
- count = 1
- tags = {
-     Name = "TERRAFORM"
- }
-
+resource "aws_s3_bucket" "b" {
+bucket = ""    
+tags ={
+    Name = "my bucket"
+    Environment = "Dev"
+}
+}
+resource "aws_s3_bucket_acl" "example" {
+  bucket = aws_s3_bucket.b.id
+  acl    = "private"
 }
