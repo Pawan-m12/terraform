@@ -9,3 +9,6 @@ output "ec2_private_ip_address" {
 output "ec2_pem" {
     value = aws_instance.my_ec2_instance.key_name
 }
+output "vpc_security_group_ids" {
+    value = aws_instance.my_ec2_instance.vpc_security_group_ids
+}
