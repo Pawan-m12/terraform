@@ -17,3 +17,15 @@ variable "root_key_name" {
 variable "root_key_path" {
     type = string 
 }
+
+variable "root_bucket_name" {
+    type = string 
+}
+
+variable "root_dynamodb_name" {
+    type = string 
+}
+
+variable "root_dynamodb_key" {
+    type = string 
+}
